@@ -1,0 +1,31 @@
+{
+  "name": "ts-jest-works-with-jest-projects",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "repository": "git@github.com:js-um/ts-jest-works-with-jest-projects.git",
+  "author": "Joonsung Um <joonsung.um@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "jest": "^22.4.4",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.8.3"
+  },
+  "workspaces": [
+    "packages/**"
+  ],
+  "jest": {
+    "projects": [
+      "<rootDir>/packages/*"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}"
+    ],
+    "coverageReporters": [
+      "html",
+      "text"
+    ]
+  }
+}
